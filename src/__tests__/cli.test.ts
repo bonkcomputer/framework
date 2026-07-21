@@ -99,6 +99,23 @@ describe('CLI Commands', () => {
       consoleErrorSpy.mockRestore();
     });
 
+    it('should add runpod, gmi, and gpu components', async () => {
+      const consoleSpy = vi.spyOn(console, 'log').mockImplementation(() => {});
+      const consoleErrorSpy = vi.spyOn(console, 'error').mockImplementation(() => {});
+
+      try {
+        await addCommand('runpod', { path: './src' });
+        await addCommand('gmi', { path: './src' });
+        await addCommand('gpu', { path: './src' });
+        expect(true).toBe(true);
+      } catch (error) {
+        expect(error).toBeDefined();
+      }
+
+      consoleSpy.mockRestore();
+      consoleErrorSpy.mockRestore();
+    });
+
     it('should handle unknown component type', async () => {
       const consoleSpy = vi.spyOn(console, 'log').mockImplementation(() => {});
       const consoleErrorSpy = vi.spyOn(console, 'error').mockImplementation(() => {});

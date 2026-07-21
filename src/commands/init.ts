@@ -108,6 +108,12 @@ export async function initCommand(projectName?: string, options: InitOptions = {
         default: true,
       },
       {
+        type: 'confirm',
+        name: 'useGpu',
+        message: 'Enable GPU Cloud compute (RunPod.io & GMI.cloud)?',
+        default: true,
+      },
+      {
         type: 'list',
         name: 'packageManager',
         message: 'Which package manager would you like to use?',

@@ -82,6 +82,15 @@ bcf add ai
 
 # Add E2B code execution sandboxes
 bcf add vm
+
+# Add RunPod Serverless GPU compute
+bcf add runpod
+
+# Add GMI Cloud Enterprise H100/H200 GPU cluster
+bcf add gmi
+
+# Add Hybrid GPU Compute Orchestrator with Solana payment settlement
+bcf add gpu
 ```
 
 ### **Development Commands**

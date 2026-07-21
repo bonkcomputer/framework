@@ -9,6 +9,7 @@ export interface TemplateConfig {
   projectName: string;
   useConvex?: boolean;
   useE2B?: boolean;
+  useGpu?: boolean;
   packageManager?: string;
 }
 
@@ -89,6 +90,7 @@ async function processTemplateFiles(dirPath: string, config: TemplateConfig) {
       content = content.replace(/{{PROJECT_NAME_PASCAL}}/g, pascalCase(config.projectName));
       content = content.replace(/{{USE_CONVEX}}/g, config.useConvex ? 'true' : 'false');
       content = content.replace(/{{USE_E2B}}/g, config.useE2B ? 'true' : 'false');
+      content = content.replace(/{{USE_GPU}}/g, config.useGpu ? 'true' : 'false');
       content = content.replace(/{{PACKAGE_MANAGER}}/g, config.packageManager || 'pnpm');
       
       await fs.writeFile(filePath, content);

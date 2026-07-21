@@ -45,6 +45,21 @@ const AVAILABLE_COMPONENTS = {
     description: 'Add E2B code execution sandbox components',
     files: ['components/code-sandbox.tsx', 'lib/sandbox.ts'],
   },
+  runpod: {
+    name: '⚡ RunPod GPU Compute',
+    description: 'Add RunPod serverless GPU endpoints and media execution hooks',
+    files: ['components/runpod-gpu.tsx', 'lib/runpod.ts', 'hooks/use-runpod.ts'],
+  },
+  gmi: {
+    name: '☁️ GMI Cloud Cluster',
+    description: 'Add GMI Cloud enterprise H100/H200 cluster and vLLM integration',
+    files: ['components/gmi-cluster.tsx', 'lib/gmi-cloud.ts', 'actions/gmi-actions.ts'],
+  },
+  gpu: {
+    name: '🚀 Hybrid GPU Compute Hub',
+    description: 'Add unified GPU orchestrator with Solana on-chain compute payments',
+    files: ['components/gpu-compute-hub.tsx', 'lib/compute-router.ts', 'lib/solana-compute-pay.ts'],
+  },
 };
 
 export async function addCommand(component: string, options: AddOptions = {}) {
@@ -179,6 +194,9 @@ async function updateProjectDependencies(component: string, packageJsonPath: str
     defi: ['@solana/web3.js', '@coral-xyz/anchor'],
     ai: ['ai', '@ai-sdk/anthropic', '@ai-sdk/openai'],
     vm: ['@e2b/code-interpreter'],
+    runpod: ['runpod-sdk'],
+    gmi: ['@ai-sdk/openai'],
+    gpu: ['runpod-sdk', '@solana/web3.js', '@e2b/code-interpreter'],
   };
 
   const deps = componentDependencies[component];

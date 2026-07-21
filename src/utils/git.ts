@@ -46,12 +46,20 @@ build/
 dist/
 out/
 
-# Environment variables
+# Environment variables & secrets
 .env
-.env.local
-.env.development.local
-.env.test.local
-.env.production.local
+.env.*
+*.env
+*.pem
+*.key
+*.secret
+*.keystore
+id_rsa*
+secrets/
+
+# Chat context & memory files
+chatcontextmemory.md
+chatcontextmemory*.md
 
 # Logs
 npm-debug.log*
@@ -85,8 +93,10 @@ coverage/
 # Convex
 .convex/
 
-# E2B
+# MicroVM & GPU Cloud Caches
 .e2b/
+.runpod/
+.gmi/
 
 # IDE
 .vscode/

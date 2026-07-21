@@ -72,12 +72,35 @@ web_modules/
 # Yarn Integrity file
 .yarn-integrity
 
-# dotenv environment variable files
+# Sensitive context & memories
+chatcontextmemory.md
+chatcontextmemory*.md
+
+# Sensitive files & Environment variables
 .env
-.env.development.local
-.env.test.local
-.env.production.local
-.env.local
+.env.*
+*.env
+*.pem
+*.key
+*.secret
+*.keystore
+id_rsa*
+secrets/
+
+# Provider & SDK Caches
+.e2b/
+.runpod/
+.gmi/
+.solana/
+.convex/
+.vercel/
+.turbo/
+
+# OS & IDE files
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
 
 # parcel-bundler cache (https://parceljs.org/)
 .cache

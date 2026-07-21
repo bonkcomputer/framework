@@ -23,6 +23,9 @@ bcf init my-project
 bcf add wallet
 bcf add swap
 bcf add nft
+bcf add runpod
+bcf add gmi
+bcf add gpu
 
 # Update framework
 bcf update
@@ -76,6 +79,7 @@ The framework uses a template system where:
 - `{{PROJECT_NAME_PASCAL}}` - PascalCase version
 - `{{USE_CONVEX}}` - Boolean for Convex integration
 - `{{USE_E2B}}` - Boolean for E2B integration
+- `{{USE_GPU}}` - Boolean for RunPod/GMI Cloud GPU integration
 - `{{PACKAGE_MANAGER}}` - User's package manager choice
 
 ## 🔍 Troubleshooting
