@@ -74,7 +74,10 @@ export async function addCommand(component: string, options: AddOptions = {}) {
     }
 
     const packageJson = await fs.readJson(packageJsonPath);
-    const isBonkProject = packageJson.dependencies?.['@bonk-computer/framework'] ||
+    const isBonkProject = packageJson.dependencies?.['bonk-computer-framework-v2'] ||
+                         packageJson.dependencies?.['@bonkcomputer/frameworkv2'] ||
+                         packageJson.dependencies?.['@bonkcomputer/framework'] ||
+                         packageJson.dependencies?.['@bonk-computer/framework'] ||
                          packageJson.name?.includes('bonk') ||
                          packageJson.description?.includes('Bonk Computer');
 

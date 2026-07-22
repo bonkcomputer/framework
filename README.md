@@ -26,13 +26,13 @@ Install the Bonk Computer Framework CLI globally:
 
 ```bash
 # Install globally via npm
-npm install -g @bonkcomputer/framework
+npm install -g @bonkcomputer/frameworkv2
 
 # Or install via pnpm (recommended)
-pnpm add -g @bonkcomputer/framework
+pnpm add -g @bonkcomputer/frameworkv2
 
 # Or install via yarn
-yarn global add @bonkcomputer/framework
+yarn global add @bonkcomputer/frameworkv2
 ```
 
 ### **Create a New Project**

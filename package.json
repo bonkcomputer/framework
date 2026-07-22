@@ -1,12 +1,13 @@
 {
-  "name": "@bonkcomputer/framework",
-  "version": "1.0.1",
+  "name": "bonk-computer-framework-v2",
+  "version": "1.0.2",
   "description": "Production-grade Solana Web3 development framework built on Next-Forge foundation",
   "type": "module",
   "main": "dist/index.mjs",
   "bin": {
     "bonk-computer-framework": "dist/cli.mjs",
-    "bcf": "dist/cli.mjs"
+    "bcf": "dist/cli.mjs",
+    "bcfv2": "dist/cli.mjs"
   },
   "scripts": {
     "build": "tsup",

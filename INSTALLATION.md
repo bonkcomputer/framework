@@ -7,9 +7,9 @@ We've published the package officially on NPM, users can install and use it like
 ### Global Installation
 
 ```bash
-npm install -g @bonk-computer/framework
+npm install -g @bonkcomputer/frameworkv2
 # or
-npx @bonk-computer/framework@latest init my-bonk-app
+npx @bonkcomputer/frameworkv2@latest init my-bonk-app
 ```
 
 ### Usage Commands

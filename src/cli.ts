@@ -14,7 +14,7 @@ Production-grade Solana Web3 development toolkit
 program
   .name('bonk-computer-framework')
   .description('CLI for creating Solana Web3 applications with the Bonk Computer Framework')
-  .version('1.0.1');
+  .version('1.0.2');
 
 program
   .command('init')

@@ -21,8 +21,12 @@ export async function updateCommand(options: UpdateOptions = {}) {
     }
 
     const packageJson = await fs.readJson(packageJsonPath);
-    const currentVersion = packageJson.dependencies?.['@bonk-computer/framework'] || 
-                          packageJson.devDependencies?.['@bonk-computer/framework'];
+    const currentVersion = packageJson.dependencies?.['bonk-computer-framework-v2'] ||
+                          packageJson.devDependencies?.['bonk-computer-framework-v2'] ||
+                          packageJson.dependencies?.['@bonkcomputer/frameworkv2'] || 
+                          packageJson.devDependencies?.['@bonkcomputer/frameworkv2'] ||
+                          packageJson.dependencies?.['@bonkcomputer/framework'] ||
+                          packageJson.dependencies?.['@bonk-computer/framework'];
 
     if (!currentVersion) {
       console.error(chalk.red('❌ Bonk Computer Framework not found in dependencies.'));
@@ -33,7 +37,7 @@ export async function updateCommand(options: UpdateOptions = {}) {
     
     try {
       // Check for latest version
-      const { stdout } = await execa('npm', ['view', '@bonk-computer/framework', 'version']);
+      const { stdout } = await execa('npm', ['view', 'bonk-computer-framework-v2', 'version']);
       const latestVersion = stdout.trim();
       
       spinner.stop();
@@ -78,7 +82,7 @@ export async function updateCommand(options: UpdateOptions = {}) {
       const updateSpinner = ora('📦 Updating Bonk Computer Framework...').start();
       
       try {
-        await execa(packageManager, ['add', `@bonk-computer/framework@${latestVersion}`]);
+        await execa(packageManager, ['add', `bonk-computer-framework-v2@${latestVersion}`]);
         updateSpinner.succeed('✅ Framework updated successfully!');
       } catch (error) {
         updateSpinner.fail('❌ Failed to update framework');
