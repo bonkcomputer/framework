@@ -1,23 +1,52 @@
-# Installing the Bonk Computer Framework as a Package
+# Installing the Bonk Computer Framework V2
 
-## 🔧 Usage
+## 🔧 Package Names
 
-We've published the package officially on NPM, users can install and use it like this:
+Use the following package names depending on which generation you are installing:
 
-### Global Installation
+- V2: `bonk-computer-framework-v2`
+- Legacy V1: `@bonkcomputer/framework`
+
+The V2 package is the recommended path for all new installs and project generation.
+
+## 🚀 Install
+
+### Global Installation (recommended)
 
 ```bash
-npm install -g @bonkcomputer/frameworkv2
+npm install -g bonk-computer-framework-v2
 # or
-npx @bonkcomputer/frameworkv2@latest init my-bonk-app
+pnpm add -g bonk-computer-framework-v2
+# or
+yarn global add bonk-computer-framework-v2
 ```
 
-### Usage Commands
+### One-off Use
+
+```bash
+npx bonk-computer-framework-v2@latest init my-bonk-app
+```
+
+### Legacy V1 Installation
+
+If you are still following older documentation or supporting a V1 project, the legacy install path is:
+
+```bash
+npm install -g @bonkcomputer/framework
+```
+
+## 🧩 Usage Commands
 
 ```bash
 # Create new project
 bonk-computer-framework init my-project
 bcf init my-project
+
+# Create a project from a template
+bcf init my-game --template game
+bcf init my-defi-app --template defi
+bcf init my-nft-marketplace --template nft
+bcf init simple-app --template minimal
 
 # Add components
 bcf add wallet

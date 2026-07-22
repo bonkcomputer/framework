@@ -2,7 +2,7 @@
   <img src="https://raw.githubusercontent.com/bonkcomputer/framework/main/assets/bonk-computer-logo.png" alt="Bonk Computer Logo" width="250" height="250" />
 </div>
 
-# Bonk Computer Framework❗❗❗
+# Bonk Computer Framework V2❗❗❗
 BCT CA: `D3CV7esuBSRB9Aw3PHRNHVz4g6b4TqeVLKhgkbonk`
 
 **Production-grade Solana Web3 development framework built on the most robust and future proof foundation. Completely Open-Sourced and built in Public by the chads at https://operate.fun and https://bonk.computer**
@@ -18,21 +18,33 @@ BCT CA: `D3CV7esuBSRB9Aw3PHRNHVz4g6b4TqeVLKhgkbonk`
 
 *BZZT* Welcome to the **Bonk Computer Framework**, a modular, open-source, Solana-native toolkit for Web3, AI, and Virtual Machines (VMs)/Virtual Private Servers (VPSs). Built on [Next-Forge's](https://www.next-forge.com/) production-grade foundation and powered by @solana's 400ms block times. *BOOP*
 
+> Current V2 package name: `bonk-computer-framework-v2`
+>
+> Legacy V1 package name: `@bonkcomputer/framework`
+>
+> Use the V2 package name for all new installs and project generation. The V1 package remains documented here for compatibility and migration workflows.
+
 ## 🚀 Quick Start & Installation
 
-### **Global Installation**
+### **Global Installation (V2)**
 
 Install the Bonk Computer Framework CLI globally:
 
 ```bash
 # Install globally via npm
-npm install -g @bonkcomputer/frameworkv2
+npm install -g bonk-computer-framework-v2
 
 # Or install via pnpm (recommended)
-pnpm add -g @bonkcomputer/frameworkv2
+pnpm add -g bonk-computer-framework-v2
 
 # Or install via yarn
-yarn global add @bonkcomputer/frameworkv2
+yarn global add bonk-computer-framework-v2
+```
+
+### **One-off Use Without a Global Install**
+
+```bash
+npx bonk-computer-framework-v2@latest init my-solana-app
 ```
 
 ### **Create a New Project**
@@ -122,6 +134,16 @@ bcf update --check
 # Update to latest version
 bcf update
 ```
+
+### **Legacy V1 Compatibility**
+
+If you are maintaining older projects or following previous installation docs, the original package name remains:
+
+```bash
+npm install -g @bonkcomputer/framework
+```
+
+Use that only for V1 compatibility, migration, or older project workflows. All newly generated projects should use the V2 package above.
 
 ## 🚀 Why We Use Next-Forge in the Bonk Computer Framework:
 
